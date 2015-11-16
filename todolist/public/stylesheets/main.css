@@ -11,7 +11,7 @@ header h1 {
   text-align: center;
 }
 
-main {
-  width: 100%;
-  background-color: white;
+main .content{
+  margin: 0 auto;
+  width: 15%;
 }
