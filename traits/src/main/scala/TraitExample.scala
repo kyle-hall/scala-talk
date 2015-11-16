@@ -40,9 +40,11 @@ object Main {
     val humans = spartacus :: (turing :: (carlin :: (jerry :: Nil)))
 
     humans.foreach{println}
+    println()
 
     //prints the name of each element of the collection created by the map
     humans.map(_.name).foreach{println}
+    println()
 
     //similar functionality, but using foldLeft instead of map
     humans.
