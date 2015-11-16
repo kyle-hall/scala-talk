@@ -12,7 +12,7 @@ object ForExpression {
     //If I wanted to create pairs of mothers and each of their children, filters
     //and flatmaps are quite useful
 
-    val list1 = persons filter (p => !isMale) flatMap (p =>
+    val list1 = persons filter (p => !p.isMale) flatMap (p =>
       p.children map (c => (p.name, c.name)))
 
     list1.foreach{println}
