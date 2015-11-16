@@ -1,5 +1,7 @@
-
-*/project
-!todolist/project/plugins.sbt
-!todolist/project/build.properties
+logs
+99-scala-problems/project
+akka-ping-pong/project
+forexpressions/project
+todolist/project/project
+todolist/project/target
 */target
