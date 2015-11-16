@@ -8,9 +8,10 @@ case object StopMessage
 class Ping(pong: ActorRef) extends Actor {
   var count = 0
 
+
   def incrementAndPrint {
     count += 1
-    println("ping")
+    println(s"Ping with count ${this.count}")
   }
 
   def receive = {
@@ -43,7 +44,9 @@ class Pong extends Actor {
 object PingPongTest extends App {
   val system = ActorSystem("PingPongSystem")
   val pong = system.actorOf(Props[Pong], name = "pong")
-  val ping = sytem.actorOf(Props(new Ping(pong)), name = "ping")
+  val ping = system.actorOf(Props(new Ping(pong)), name = "ping")
+  val ping2 = system.actorOf(Props(new Ping(pong)), name = "ping2")
 
   ping ! StartMessage
+  ping2 ! StartMessage
 }
