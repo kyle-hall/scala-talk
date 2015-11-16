@@ -1,4 +1,5 @@
 
 */project
+!todolist/project/plugins.sbt
+!todolist/project/build.properties
 */target
-!*/project/plugins.sbt
