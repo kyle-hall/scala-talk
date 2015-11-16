@@ -15,12 +15,15 @@ object ForExpression {
     val list1 = persons filter (p => !p.isMale) flatMap (p =>
       p.children map (c => (p.name, c.name)))
 
+    println("This is the result of using filter and flatMap")
     list1.foreach{println}
+    println()
 
     //This isn't very easy to read, however. For expressions can help with that.
 
     val list2 = for (p <- persons; if !p.isMale; c <- p.children) yield (p.name, c.name)
 
+    println("This is the result of using for expressions")
     list2.foreach{println}
 
   }
